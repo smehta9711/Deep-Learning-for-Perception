@@ -12,7 +12,11 @@ The main goal was to create a synthetic dataset to train a segmentation network 
 
 ![Segmentation Image](./helpers/sampleDataset.png)
 
-                          Sample Training Sample - RGB Image and Groundtruth Segmentation Mask
+<div align="center">
+
+Sample Training Sample - RGB Image and Groundtruth Segmentation Mask
+
+</div>
                           
 ![Segmentation1 Image](./helpers/sampledata.png)
 
