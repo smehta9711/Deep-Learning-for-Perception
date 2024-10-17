@@ -11,6 +11,7 @@ For each class, we estimate the spread of RGB values by analyzing the dataset to
 3) Apply the binary mask on the provided images to segment objects of each class separately.
 
 We perform color segmentation to identify and classify four distinct objects from RGB images:
+
 **Class 0:** Green cap (smallest)
 **Class 1:** Yellow cap
 **Class 2:** Blue cap
