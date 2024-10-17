@@ -20,4 +20,11 @@ Sample Training Sample - RGB Image and Groundtruth Segmentation Mask
                           
 ![Segmentation1 Image](./helpers/sampledata.png)
 
+
+# Data Augmentation
+
+To make our segmentation network more robust to real-world conditions, we applied several augmentations, including camera tilt, object occlusion, background changes, lighting variations, noise, blur, and color alterations. These color adjustments involved techniques like random brightness/contrast, channel shuffling, and random shadow effects.
+
+![Segmentation2 Image](./helpers/augmented.png)
+
    
