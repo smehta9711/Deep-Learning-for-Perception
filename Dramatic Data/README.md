@@ -12,7 +12,8 @@ The main goal was to create a synthetic dataset to train a segmentation network 
 
 ![Segmentation Image](./helpers/sampleDataset.png)
 
-Sample Training Sample - RGB Image and Groundtruth Segmentation Mask
+                          Sample Training Sample - RGB Image and Groundtruth Segmentation Mask
+                          
 ![Segmentation1 Image](./helpers/sampledata.png)
 
    
