@@ -12,15 +12,17 @@ For each class, we estimate the spread of RGB values by analyzing the dataset to
 
 We perform color segmentation to identify and classify four distinct objects from RGB images:
 
-**Class 0:** Green cap (smallest)
-**Class 1:** Yellow cap
-**Class 2:** Blue cap
-**Class 3:** Red cap (largest)
+**Class 0:** Green cap (smallest) \n
+**Class 1:** Yellow cap  \n
+**Class 2:** Blue cap  \n
+**Class 3:** Red cap (largest)  \n
 
 We work with 7 RGB images that contain these objects, and the task involves using Gaussian models to represent the probability distribution of each class. By modeling the color distributions, we can accurately segment the objects based on their RGB values.
 
 # Implementation (Pseudo Code for Python)
+
 **Training Code**
+
 Rerun this code for each class separately:
 
 Initialize an empty list/matrix to store RGB values from all images.
@@ -39,14 +41,17 @@ Estimate the mean of the RGB values.
 Estimate the covariance of the RGB values.
 
 **Color Segmentation for a Single Class**
+
 For each image index from 1 to 10:
 
 Load the image from the file.
+
 1) Apply a Gaussian distribution to the image using the applyGaussianToImage function.
 2) Create a mask where the probability is greater than 1e-6.
 3) Apply the mask.
    
 Function applyGaussianToImage:
+
 1) Convert the image to double precision.
 2) Reshape the image into a matrix where each row is a pixel vector (R, G, B).
 3) Compute the probability density function (PDF) for each pixel using a multivariate Gaussian distribution.
