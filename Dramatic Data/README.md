@@ -27,4 +27,18 @@ To make our segmentation network more robust to real-world conditions, we applie
 
 ![Segmentation2 Image](./helpers/augmented.png)
 
+
+# Semantic Segmentation 
+
+The semantic segmentation model uses a U-Net architecture with an encoder-decoder design. The encoder consists of convolutional blocks, similar to those found in ResNet18. The model was trained on the "Turing-cluster" supercomputer and analyzed using the Weights and Biases (wandb) framework. We deploy the BCE Logits Loss Function for our network considering its a binary classification model where we isolate the window frames from the background.
+
+<div align="center">
+
+Segmentation results:
+
+</div>
+       
+
+![Segmentation3 Image](./helpers/Untitled (1).png)
+
    
