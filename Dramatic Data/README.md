@@ -46,8 +46,8 @@ We conducted instance segmentation to identify and label individual objects, spe
 
 <div style="display: flex; justify-content: center;">
 
-  <img src="./helpers/mask_883.png" alt="First Image" style="margin-right: 10px;"/>
-  <img src="./helpers/mask_883.png" alt="Second Image"/>
+  <img src="./helpers/mask_883.png" alt="First Image" style="margin-right: 6px;"/>
+  <img src="./helpers/instance.jpg" alt="Second Image"/>
 
 </div>
 
