@@ -12,10 +12,11 @@ For each class, we estimate the spread of RGB values by analyzing the dataset to
 
 We perform color segmentation to identify and classify four distinct objects from RGB images:
 
-**Class 0:** Green cap (smallest) \n
-**Class 1:** Yellow cap  \n
-**Class 2:** Blue cap  \n
-**Class 3:** Red cap (largest)  \n
+**Class 0:** Green cap (smallest)  
+**Class 1:** Yellow cap  
+**Class 2:** Blue cap  
+**Class 3:** Red cap (largest)
+
 
 We work with 7 RGB images that contain these objects, and the task involves using Gaussian models to represent the probability distribution of each class. By modeling the color distributions, we can accurately segment the objects based on their RGB values.
 
