@@ -22,7 +22,7 @@ We work with 7 RGB images that contain these objects, and the task involves usin
 
 # Implementation (Pseudo Code for Python)
 
-**Training Code**
+**Training Code**:
 
 Rerun this code for each class separately:
 
@@ -41,7 +41,7 @@ Read the image from the file path.
 Estimate the mean of the RGB values.
 Estimate the covariance of the RGB values.
 
-**Color Segmentation for a Single Class**
+**Color Segmentation for a Single Class**:
 
 For each image index from 1 to 10:
 
