@@ -10,59 +10,46 @@ For each class, we estimate the spread of RGB values by analyzing the dataset to
 2) Compute the probability density function for every pixel in the provided images. Then make a binary mask using a threshold (tunable).
 3) Apply the binary mask on the provided images to segment objects of each class separately.
 
- {
-   "cell_type": "markdown",
-   "id": "5c586079",
-   "metadata": {},
-   "source": [
-    "## 4. Implementation (Psuedo Code for Python) "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "4e9901fd",
-   "metadata": {
-    "vscode": {
-     "languageId": "plaintext"
-    }
-   },
-   "outputs": [],
-   "source": [
-    "# Training Code\n",
-    "\n",
-    "Rerun this code for each class separately\n",
-    "\n",
-    "Initialize an empty list/matrix to store RGB values from all images\n",
-    "\n",
-    "For each image index from 1 to 7:\n",
-    "    - Read the image from the file path\n",
-    "    - Display the image (imshow)\n",
-    "\n",
-    "    - Draw a freehand shape on the image and create a mask for this shape (`roipoly` in MATLAB, find or use any function for this in Python)\n",
-    "\n",
-    "    - Extract the RGB channels from the image\n",
-    "    - Apply the mask to get RGB values from the selected area\n",
-    "\n",
-    "    - Combine the RGB values into a single list\n",
-    "    - Append this list to the main list of RGB values\n",
-    "\n",
-    "Estimate the mean of the rgb values\n",
-    "Estimate the covariance of the RGB values\n",
-    "\n",
-    "# Color Segmentation for a single class\n",
-    "\n",
-    "For i from 1 to 10:\n",
-    "    - Load the image from the file\n",
-    "    - Apply Gaussian distribution to the image using `applyGaussianToImage` function\n",
-    "    - Create a mask where the probability is greater than 1e-6\n",
-    "    - Apply the mask\n",
-    "\n",
-    "Function `applyGaussianToImage`:\n",
-    "    - Convert image to double precision\n",
-    "    - Reshape the image into a matrix where each row is a pixel vector (R, G, B)\n",
-    "    - Implement and compute the probability density function (PDF) for each pixel using multivariate Gaussian \n",
-    "    - Reshape the PDF result back to image dimensions\n",
-    "    - Return the resulting image with PDF values"
-   ]
-  },
+We perform color segmentation to identify and classify four distinct objects from RGB images:
+**Class 0:** Green cap (smallest)
+**Class 1:** Yellow cap
+**Class 2:** Blue cap
+**Class 3:** Red cap (largest)
+
+We work with 7 RGB images that contain these objects, and the task involves using Gaussian models to represent the probability distribution of each class. By modeling the color distributions, we can accurately segment the objects based on their RGB values.
+
+# Implementation (Pseudo Code for Python)
+**Training Code**
+Rerun this code for each class separately:
+
+Initialize an empty list/matrix to store RGB values from all images.
+
+For each image index from 1 to 7:
+
+Read the image from the file path.
+1) Display the image (using imshow).
+2) Draw a freehand shape on the image and create a mask for this shape (use roipoly in MATLAB or find/use any equivalent function in Python).
+3) Extract the RGB channels from the image.
+4) Apply the mask to get RGB values from the selected area.
+5) Combine the RGB values into a single list.
+6) Append this list to the main list of RGB values.
+  
+Estimate the mean of the RGB values.
+Estimate the covariance of the RGB values.
+
+**Color Segmentation for a Single Class**
+For each image index from 1 to 10:
+
+Load the image from the file.
+1) Apply a Gaussian distribution to the image using the applyGaussianToImage function.
+2) Create a mask where the probability is greater than 1e-6.
+3) Apply the mask.
+   
+Function applyGaussianToImage:
+1) Convert the image to double precision.
+2) Reshape the image into a matrix where each row is a pixel vector (R, G, B).
+3) Compute the probability density function (PDF) for each pixel using a multivariate Gaussian distribution.
+4) Reshape the PDF result back to image dimensions.
+5) Return the resulting image with PDF values.
+
+ 
