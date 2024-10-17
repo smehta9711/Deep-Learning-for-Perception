@@ -39,6 +39,6 @@ Segmentation results:
 </div>
        
 
-![Segmentation3 Image](./helpers/Untitled (1).png)
+![Segmentation3 Image](./helpers/Untitled(1).png)
 
    
