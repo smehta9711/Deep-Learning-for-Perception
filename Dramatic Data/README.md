@@ -44,10 +44,4 @@ Segmentation results:
 # Instance Segmentation
 We conducted instance segmentation to identify and label individual objects, specifically multiple window frames. A key technique used was the Connected Components algorithm, which detects and labels regions of similar pixels based on connectivity. While effective for segmenting distinct objects in binary masks, it struggled with overlapping instances. 
 
-<div style="display: flex; justify-content: center;">
-
-  <img src="./helpers/mask_883.png" alt="First Image" style="margin-right: 6px;"/>
-  <img src="./helpers/instance.jpg" alt="Second Image"/>
-
-</div>
-
+![Segmentation3 Image](./helpers/combined.jpg)
